@@ -66,6 +66,28 @@
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.6.1</version>
+
+                <executions>
+                    <execution>
+                        <id>copy-compile-dependencies</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+
+                        <configuration>
+                            <includeScope>compile</includeScope>
+                            <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-install-plugin</artifactId>
                 <version>3.1.1</version>
 
@@ -89,6 +111,22 @@
             </plugin>
 
         </plugins>
+
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>false</filtering>
+            </resource>
+
+            <resource>
+                <directory>${project.build.directory}/lib</directory>
+                <targetPath>lib</targetPath>
+                <filtering>false</filtering>
+                <includes>
+                    <include>*.jar</include>
+                </includes>
+            </resource>
+        </resources>
     </build>
 
 </project>
