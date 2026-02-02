@@ -118,7 +118,8 @@
                 <configuration>
                     <archive>
                         <manifestEntries>
-                            <Class-Path>lib/commons-lang3-3.12.0.jar lib/javafx-controls-18.0.1.jar lib/javafx-controls-18.0.1-linux.jar lib/javafx-graphics-18.0.1.jar lib/javafx-graphics-18.0.1-linux.jar lib/javafx-base-18.0.1.jar lib/javafx-base-18.0.1-linux.jar lib/desktop-game-engine-1.0.jar</Class-Path>
+                            <Class-Path>./ lib/commons-lang3-3.12.0.jar lib/javafx-controls-18.0.1.jar lib/javafx-controls-18.0.1-linux.jar lib/javafx-graphics-18.0.1.jar lib/javafx-graphics-18.0.1-linux.jar lib/javafx-base-18.0.1.jar lib/javafx-base-18.0.1-linux.jar lib/desktop-game-engine-1.0.jar</Class-Path>
+                            <Rsrc-Class-Path>./ lib/commons-lang3-3.12.0.jar lib/javafx-controls-18.0.1.jar lib/javafx-controls-18.0.1-linux.jar lib/javafx-graphics-18.0.1.jar lib/javafx-graphics-18.0.1-linux.jar lib/javafx-base-18.0.1.jar lib/javafx-base-18.0.1-linux.jar lib/desktop-game-engine-1.0.jar</Rsrc-Class-Path>
                             <Main-Class>org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader</Main-Class>
                             <Rsrc-Main-Class>com.javarush.games.racer.RacerGame</Rsrc-Main-Class>
                         </manifestEntries>
